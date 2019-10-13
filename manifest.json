@@ -1,0 +1,30 @@
+ {
+    "name": "WoW Quick View",
+    "version": "1.0",
+    "description": "Quickly view a character when browsing the WoW forums",
+    "icons": {
+        "16": "icons/icon_128.png",
+        "32": "icons/icon_128.png",
+        "48": "icons/icon_128.png",
+        "128": "icons/icon_128.png"
+    },
+    "page_action": {
+        "default_icon": {
+            "16": "icons/icon_128.png",
+            "32": "icons/icon_128.png",
+            "48": "icons/icon_128.png",
+            "128": "icons/icon_128.png"
+        }
+    },
+    "manifest_version": 2,
+    "content_scripts": [{
+        "matches": ["https://*.forums.blizzard.com/*"],
+        "js": ["script.js"]
+    }],
+    "background": {
+        "scripts":["background.js"]
+    },
+    "permissions": [
+    "tabs"
+    ]
+}
